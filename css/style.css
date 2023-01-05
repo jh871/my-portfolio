@@ -29,6 +29,8 @@ p {
 header {
   display: flex;
   background-color: darkgray;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 header h1 {
@@ -36,22 +38,46 @@ header h1 {
 }
 
 
+header .nav a {
+  padding: 30px;
+}
 
+.hero-banner {
+  min-height: 400px;
+  padding-top:00px;
+  width: 100%;
+  display:flex;
+  background-image: url(../images/hero-bg1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.sectionHeader {
+  display:flex;
+  padding-right: 10px; 
+}
 
 .proj1 {
-  background-image: url(../images/02-portfolio-3.jpg);
+  background-image: url(../images/portfolio1pwsg.jpg);
+  height: 100%;
+  width: 100%;
+  background-position: center;
 }
 .proj2 {
-  background-image: url(../images/02-portfolio-3.jpg);
+  background-image: url(../images/portfolio2.jpg);
+  background-position: center;
 }
 .proj3 {
-  background-image: url(../images/02-portfolio-3.jpg);
+  background-image: url(../images/portfolio3.jpg);
+  background-position: center;
 }
 .proj4 {
-  background-image: url(../images/02-portfolio-3.jpg);
+  background-image: url(../images/portfolio4.jpg);
+  background-position: center;
 }
 .proj5 {
-  background-image: url(../images/02-portfolio-3.jpg);
+  background-image: url(../images/portfolio5.jpg);
+  background-position: center;
 }
 
 .flexContainer {
@@ -75,7 +101,7 @@ header h1 {
 }
 
 .flex-item div {
-  background-color: lightgreen;
+  background: rgba(144, 238, 144, 0.7);
   padding: 10px;
 }
 
@@ -84,6 +110,9 @@ header h1 {
     flex-basis: 100%;
   }
   .flex-item:first-child {
+    min-height: 150px;
+  }
+  .hero-banner {
     min-height: 150px;
   }
 }
