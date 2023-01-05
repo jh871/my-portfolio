@@ -21,3 +21,69 @@ h6 {
 p {
   margin: 0;
 }
+
+.page-wrapper {
+  background-color: rgb(135, 206, 216);
+}
+
+header {
+  display: flex;
+  background-color: darkgray;
+}
+
+header h1 {
+  padding: 15px;
+}
+
+
+
+
+.proj1 {
+  background-image: url(../images/02-portfolio-3.jpg);
+}
+.proj2 {
+  background-image: url(../images/02-portfolio-3.jpg);
+}
+.proj3 {
+  background-image: url(../images/02-portfolio-3.jpg);
+}
+.proj4 {
+  background-image: url(../images/02-portfolio-3.jpg);
+}
+.proj5 {
+  background-image: url(../images/02-portfolio-3.jpg);
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  display: flex;
+  align-items: flex-end;
+  flex-basis: calc(50% - 1em);
+  margin: 0.5em;
+  min-height: 150px;
+}
+
+.flex-item:first-child {
+  min-height: 300px;
+  flex-basis: 100%;
+}
+
+.flex-item div {
+  background-color: lightgreen;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px){
+  .flex-item {
+    flex-basis: 100%;
+  }
+  .flex-item:first-child {
+    min-height: 150px;
+  }
+}
