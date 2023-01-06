@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Aleo', Arial, Helvetica, sans-serif;
   line-height: 1.5;
   background-color: rgb(72, 85, 109);
 }
@@ -35,14 +36,30 @@ header {
   justify-content: space-evenly;
 }
 
-header h1 {
-  padding: 15px;
-  text-align: justify;
+h1 {
+  text-align: start;
+}
+
+.initials {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  width: 60%;
+  justify-content: flex-end;
+  font-size: 20px;
 }
 
 header .nav a {
+  color: black;
   padding: 30px;
   text-decoration: none;
+}
+
+.nav a:hover {
+  background-color: black;
+  color: rgb(255, 102, 14);
 }
 
 /* hero section */
@@ -51,24 +68,31 @@ header .nav a {
   padding-top:00px;
   width: 100%;
   display: flex;
+  /* align-items: center; */
+  justify-content: justify;
   background-image: url(../images/hero-bg1.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .hero {
-  display: flex;
+  display:flex;
+  align-items: flex-start;
+  justify-content: flex-start; 
+
 }
 
 .hero h2 {
-  align-items: flex-end;
-  justify-content: flex-end;
+  margin: 20px;
+  background: rgba(255, 102, 14, 0.7);
+  padding: 5px;
+  font-weight: bold;
 }
 
 /* about me section */
 .about {
   display: grid;
-  margin: 10px;
+  margin: 10px 50px 10px auto;
   grid-template-columns: 25% 75%;
   grid-template-rows: 1fr;
   grid-template-areas: 
@@ -92,7 +116,7 @@ header .nav a {
 /* main my work section */
 .page-section {
   display: grid;
-  margin: 10px;
+  margin: 10px 50px 10px auto;
   grid-template-columns: 25% 75%;
   grid-template-rows: 2fr;
   grid-template-areas: 
@@ -161,15 +185,30 @@ header .nav a {
 
 h3 {
   color: black;
+
 }
 .gridItem p {
   color:black;
+
 } 
+
+.flex-item div:hover {
+  margin-left: 10px;
+}
+
+.flexContainer a {
+  text-decoration: none;
+}
+
+
+
+
 
 
 /*contact section */
 .contact {
   display: grid;
+  margin: 10px 50px 10px auto;
   grid-template-columns: 25% 75%;
   grid-template-rows: auto;
   grid-template-areas: 
@@ -218,10 +257,23 @@ footer {
 
 /* media queries */
 @media screen and (max-width: 768px){
+  .about h2 {
+    margin-left: 10px;
+    font-size: 25px;
+    text-align: left;
+    border-right: none;
+    border-bottom: 2px solid black;
+    border-collapse: collapse;
+  }
+  .about p{
+    font-size: 18px;
+  }
   .about, .page-section, .contact {
-    display: grid;
+    display: block;
     grid-template-columns: 100%;
   }
+  .page-section {
+    display: block;
   }
   header .nav a {
     display: none;
@@ -235,3 +287,21 @@ footer {
   .hero-banner {
     min-height: 150px;
   }
+  .contactLinks a{
+    font-size: 20px;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    margin: 0px;
+    display:none;
+  }
+  .initials {
+    display: block;
+  }
+  /* .hero-banner {
+    display:block;
+  } */
+}
